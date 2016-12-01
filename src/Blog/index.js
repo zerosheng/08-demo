@@ -1,10 +1,12 @@
-import React, { PropTypes } from 'react'
+import React from 'react';
 
-class Blog extends React.Component {
-  render () {
-      return(
-        <div>ssss</div>
-      )
+class Blog extends React.Component{
+  render(){
+    return(
+      <div>
+        Blog
+      </div>
+    )
   }
 }
 

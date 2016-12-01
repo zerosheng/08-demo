@@ -1,19 +1,24 @@
-import React, { PropTypes } from 'react'
+import React from 'react';
 
-class NavHeader extends React.Component {
-  render () {
-       return(
-         <div className='nav-header'>
-           <button type="button" className="btn btn-default" aria-label="Left Align">
-             <span className="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>BACK
-           </button>
-           <h3>zeroxxss@Home</h3>
-             <button type="button" className="btn btn-default" aria-label="Left Align">
-               <span className="glyphicon glyphicon-usd" aria-hidden="true"></span>
-             </button>
-         </div>
-       )
+class NavHeader extends React.Component{
+  handleBack(){
+    this.context.router.goBack();
+  }
+  render(){
+    return(
+      <div className='nav-header'>
+        <button type="button" onClick={this.handleBack.bind(this)}>
+          <span className="glyphicon glyphicon-menu-left" aria-hidden="true"></span> BACK
+        </button>
+        <h3>zero@{this.props.title}</h3>
+        <button type="button">
+          <span className="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+      </div>
+    )
   }
 }
-
+NavHeader.contextTypes = {
+  router: React.PropTypes.object
+};
 export default NavHeader;
