@@ -11,13 +11,13 @@ class Blog extends React.Component{
     }
   }
   componentDidMount(){
-    axios.get("https://raw.githubusercontent.com/zerosheng/08-demo/master/data/blogcard.json?")
+    axios.get("https://raw.githubusercontent.com/zerosheng/08-demo/master/data/blogcard.json")
     .then(res=>this.setState({data:res.data,wait:false}))
   }
   render(){
     return(
       <div className='blog-warp'>
-        {this.state.wait?<loading/>:this.state.data.map((item,i)=><BlogCard{...item} key={i}/>)}
+        {this.state.wait?<Loading/>:this.state.data.map((item,i)=><BlogCard{...item} key={i}/>)}
       </div>
     )
   }
