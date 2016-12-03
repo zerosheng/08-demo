@@ -1,18 +1,27 @@
 import React, { PropTypes } from 'react'
 import marked from 'marked';
 import axios from 'axios';
+import Loading from "../component/Loading"
 
 class Item extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      data:''
+    }
+  }
   componentDidMount(){
-    let address=this.prpos.params.title;
+    let address=this.props.params.title;
     axios.get(`https://raw.githubusercontent.com/zerosheng/08-demo/master/data/${address}.md`)
-    .then(res=>console.log(res))
+    .then(res=>this.setState({data:res.data}))
   }
   render () {
-    console.log(this.props)
+    let content=this.state.data.length==0? <Loading/>: marked(this.state.data);
      return(
-       <div>
-       
+       <div className='item-warp'>
+       {this.state.data.length==0?<Loading/>:
+         <div dangerouslySetInnerHTML={{__html:content}}/>
+       }
        </div>
      )
   }
