@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-
+import marked from 'marked';
 class Item extends React.Component {
   render () {
     console.log(this.props)
@@ -9,6 +9,8 @@ class Item extends React.Component {
      return(
        <div>
        {content}
+       {marked('# asdfadsf')}
+       <div dangerouslySetInnerHTML={{__html:marked('# asdfadsf')}}/>
        </div>
      )
   }
