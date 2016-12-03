@@ -74,4 +74,12 @@ button:focus,button:active,button:visited{
 .git-card h2{color:blue; margin: 0;}
 .about-form{margin: 0 auto;display:line;width: 90%;max-width: 560px;}
 .show-git{display: flex;boxShadow:rgba(0,0,0,0.25) 0px 3px 10px;justify-content: space-around;
-color:teal;font-size: 16px;padding: 10px 0;  }
+color:teal;font-size: 16px;padding: 10px 0; }
+.blog-card{padding: 0 10px;margin-bottom: 10px;max-width:600px;margin: 0 auto;}
+.blog-warp{flex-grow: 1;margin-top: 20px;}
+.blog-index{background-color: blue;font-size: 28px;text-align: center;color:#fff;height: 80px;padding-top: 10px;
+}
+.blog-index span{border-radius: 50%;border: 1px solid #fff;display: inline-block;width: 60px;height: 60px;
+line-height: 50px;}
+.blog-content{box-shadow: rgba(255,0,0,0.5) 1px 1px 5px;padding: 10px;color:#666；}
+.blog-content h3{margin: 10px 0;}
