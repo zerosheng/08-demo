@@ -5,5 +5,6 @@ injectTapEventPlugin();
 
 import Routers from './routes.js';
 import './main.css';
-
+import './post.css';
+import 'highlight.js/styles/arta.css'
 render(<Routers />,document.getElementById('root'));

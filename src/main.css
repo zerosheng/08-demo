@@ -83,4 +83,4 @@ color:teal;font-size: 16px;padding: 10px 0; }
 line-height: 50px;}
 .blog-content{box-shadow: rgba(255,0,0,0.5) 1px 1px 5px;padding: 10px;color:#666；}
 .blog-content h3{margin: 10px 0;}
-.item-warp{flex-grow: 1}
+.item-wrap{flex-grow: 1}
